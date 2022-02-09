@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+  --primary-color: rgb(49, 130, 236);
+  --default-color: gray;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto' sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.progress-container {
+  width: 50rem;
+  position: relative;
+}
+
+.progress-container::before {
+  position: absolute;
+  content: '';
+  height: 3px;
+  background-color: var(--default-color);
+  width: 100%;
+  top: 1rem;
+  z-index: -1;
+}
+
+.progress-bar {
+  background-color: var(--primary-color);
+  height: 3px;
+  width: 0%;
+  transform: translateY(1rem);
+  z-index: 1;
+  transition: width ease-out .5s;
+}
+
+.progress-items {
+  /* display: none; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.progress-nav {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.progress-item {
+  border-radius: 50%;
+  border: 3px solid var(--default-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  background-color: #fcfcfc;
+  z-index: 10;
+}
+
+.btn {
+  background-color: var(--primary-color);
+  padding: 0.5rem 1rem;
+  color: #fff;
+  font-family: sans-serif;
+  cursor: pointer;
+  transition: back;
+  transition: background-color .1s linear;
+  border: none;
+}
+
+.btn:hover {
+  background-color: rgb(30, 88, 163);
+}
+
+.completed {
+  border-color: var(--primary-color);
+  border-width: 4px;
+  transition: border ease-out 1s;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  background-color: var(--default-color);
+}
