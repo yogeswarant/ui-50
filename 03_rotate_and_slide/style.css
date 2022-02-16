@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #333;
+  height: 100vh;
+}
+
+.page.tilt {
+  transform: rotate(-18deg);
+  transform-origin: 0 0;
+}
+
+.page {
+  transform: rotate(0deg);
+  transform-origin: 0 0;
+  background-color: #fcfcfc;  
+  transition: transform ease 0.5s;
+}
+.container {
+  
+  margin: auto;
+  max-width: 720px;
+
+}
+
+.container img {
+  width: 480px;
+  height: 480px;
+}
+
+.container h1 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.lead {
+  font-style: italic;
+}
+
+.content {
+  padding: 1rem 0;
+}
+
+h2 {
+  padding: 1rem 0;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: orange;
+  border-radius: 50%;
+  width: 8rem;
+  height: 8rem;
+  position: relative;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.menu {
+  position: absolute;
+  display: block;
+  width: 2rem;
+  height: .2rem;
+  background-color: #fcfcfc;
+  margin-top: 0.5rem;
+  bottom: 2.2rem;
+  right: 1.5rem;
+  cursor: pointer;
+}
+
+.menu::before {
+  content: '';
+  background-color: #fcfcfc;
+  display: block;
+  width: 2rem;
+  height: .2rem;
+  margin-top: -0.5rem;
+}
+
+.menu::after{
+  content: '';
+  background-color: #fcfcfc;
+  display: block;
+  width: 2rem;
+  height: .2rem;
+  margin-top: 0.8rem;
+}
+
+.tilt .menu {
+  position: absolute;
+  display: block;
+  width: 2rem;
+  height: .2rem;
+  background-color: #fcfcfc;
+  margin-top: 0.5rem;
+  bottom: 2.2rem;
+  right: 1.5rem;
+  transform-origin: 0;
+  transform: translateX(0.1rem) translateY(-0.5rem) rotate(60deg);
+  transition: 'transform' ease 1s;
+}
+
+.tilt .menu::before{
+  content: '';
+  background-color: red;
+  display: none;
+  width: 2rem;
+  height: .2rem;
+  margin-top: 0.8rem;
+}
+
+.tilt .menu::after{
+  content: '';
+  background-color: #fcfcfc;
+  display: block;
+  width: 2rem;
+  height: .2rem;
+  margin-top: 0.8rem;
+  transform-origin: 0;
+  transform: translateX(0.8rem) translateY(0.2rem) rotate(-80deg);
+}
+
+
+.tilt-menu {
+  color: r; 
+}
+
+.page .tilt-menu ul {
+  opacity: 0;
+}
+
+.page.tilt .tilt-menu ul {
+  list-style: none;
+  opacity: 1;
+  color: #fcfcfc;
+  transform-origin: 0;
+  transform: translateX(-10rem) translateY(-22rem) rotate(18deg);
+}
+
+.tilt-menu ul li{
+  font-size: large;
+  font-weight: bold;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.tilt-menu ul li:hover{
+  color: green;
+}
