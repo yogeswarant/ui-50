@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(0, 225, 255);
+  background-image: linear-gradient(to bottom, rgb(0, 225, 255) 0%, rgb(0, 225, 255) 50%, rgb(0, 132, 255) 50%, rgb(0, 132, 255) 100%);
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+nav {
+  display: flex;
+}
+
+nav.active {
+  background-color: rgb(211, 203, 203);
+  padding: 0 1rem;
+  width: 362px;
+  height: 51px;
+}
+
+
+nav {
+  background-color: rgb(211, 203, 203);
+  padding: 1rem;
+  width: 48px;
+  height: 38px;
+  transition: all 1s ease;
+}
+
+nav ul {
+  display: none;
+}
+
+nav.active ul {
+  display: flex;
+}
+
+nav ul li {
+  list-style: none;
+  padding: 1rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+}
+
+nav #toggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 500ms ease;
+}
+
+nav.active #toggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transform: rotate(720deg);
+  transition: all 500ms ease;
+}
+
+.line {
+  padding: 1px;
+  width: 1rem;
+  height: 2px;
+}
+
+nav.active #toggle .line.line1 {
+  background-color: black;
+  transform: rotate(45deg) translateX(2px);
+}
+
+nav.active #toggle .line.line2 {
+  background-color: black;
+  transform: rotate(135deg) translateX(-1px);
+}
+
+nav.active #toggle .line.line3 {
+  display: none;
+}
+
+nav #toggle .line.line1 {
+  background-color: black;
+  transform: translateY(0.5px);
+}
+
+nav #toggle .line.line2 {
+  background-color: black;
+  transform: translateY(-0.4rem);
+}
+
+nav #toggle .line.line3 {
+  background-color: black;
+  transform: translateY(0.1rem);
+}
