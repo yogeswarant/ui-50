@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=PT+Mono&display=swap')
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgb(134, 34, 134);
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  height: 200px;
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+}
+
+.social i {
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+.social h1 {
+  font-family: 'PT Mono', monospace;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.social p {
+  font-family: 'Courier New', Courier, monospace;
+  padding: 0 1rem;
+}
