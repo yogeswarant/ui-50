@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(48, 54, 92);
+  color: white;
+}
+
+.search-bar {
+  display: flex;
+  width: 100%;
+  padding: 1rem;
+  justify-content: flex-end;
+}
+
+.search-bar input {
+  background-color: transparent;
+  color: white;
+  border-radius: 10px;
+  padding: 5px;
+  border: 1px black solid;
+  outline: none;
+}
+
+.container {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.movie {
+  padding: 1rem;
+  width: 190px;
+  max-height: 280px;
+}
+
+.movie .poster {
+  height: 220px;
+  background-color: gray;
+}
+
+.movie .title-bar {
+  display: flex;
+  background-color: rgb(48, 54, 92);
+  height: 50px;
+}
+
+.movie .title-bar .title {
+  padding: 0.5rem;
+  font-size: 10px;
+  width: 140px;
+}
+
+.movie .title-bar .rating {
+  width: 50px;
+  padding: 1rem;
+  font-size: 10px;
+}
+
+.rating.red {
+  color: red;
+}
+
+.rating.green {
+  color: lightgreen;
+}
+
+.rating.orange {
+  color: orange;
+}
+
+.movie .title-bar .rating span {
+  padding: 3px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.movie:hover .overview {
+  opacity: 1;
+  transform: translateY(-200px);
+  z-index: 1;
+}
+
+.movie .overview {
+  position: relative;
+  height: 200px;
+  font-size: 12px;
+  padding: 1rem;
+  background-color: #fff;
+  color: rgb(48, 54, 92);
+  opacity: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  transform: translateY(0);
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+#search::placeholder {
+  color: gray;
+}
