@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #333;
+  --secondary-color: #ddd;
+}
+
+html.dark {
+  --primary-color: #ddd;
+  --secondary-color: #333;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--secondary-color);
+  transition: all 1s ease;
+}
+
+.clock-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.btn {
+  margin-top: 1rem;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:active {
+  transform: scale(98%);
+}
+
+.digital-clock {
+  font-size: 32px;
+  padding: 1rem;
+  color: var(--primary-color)
+}
+
+.date {
+  text-transform: uppercase;
+  font-size:10px;
+  color: var(--primary-color)
+}
+
+.date .datenum {
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  padding: 3px;
+}
+
+.clock {
+  margin-top: 2rem;
+  width: 220px;
+  height: 220px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* border: 2px black solid; */
+  /* border-radius: 5px; */
+}
+
+.needle {
+  position: absolute;
+  width: 2px;
+  height: 100px;
+  bottom: 50%;
+}
+
+.needle.hours {
+  height: 70px;
+  width: 3px;
+  background-color: var(--primary-color);
+  transform-origin: bottom center;
+  transform: rotate(-45deg);
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+.needle.minutes {
+  height: 100px;
+  width: 3px;
+  background-color: var(--primary-color);
+  transform-origin: bottom center;
+  transform: rotate(45deg);
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+.needle.seconds {
+  height: 100px;
+  background-color: red;
+  transform-origin: bottom center;
+  transform: rotate(180deg);
+}
+
+.pivot {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+}
+
+.pivot.inner{
+  width: 3px;
+  height: 3px;
+  background-color: red;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.pivot.outer {
+  z-index: 0;
+}
