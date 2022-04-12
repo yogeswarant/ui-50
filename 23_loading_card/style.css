@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+  --base-color: #efefef;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #dfdfdf;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.card {
+  background-color: white;
+  width: 140px;
+  height: 180px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.card .card-header {
+  background-color: var(--base-color);
+  width: 100%;
+  height: 80px;
+}
+
+.card-title h3{
+  margin: 10px auto;
+  width: 80%;
+  background-color: var(--base-color);
+  height: 5px;
+}
+
+.card-excerpt p {
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto;
+  width: 80%;
+}
+
+.card-excerpt p span {
+  margin-top: 5px;
+  background-color: var(--base-color);
+  width: 100%;
+  height: 5px;
+}
+
+.card-footer {
+  display: flex;
+  margin: 0 10px;
+  justify-content: space-between;
+}
+
+.card-footer .author-img {
+  background-color: var(--base-color);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.card-footer .author-about {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  justify-content: space-evenly;
+}
+
+.card-footer .author-name {
+  background-color: var(--base-color);
+  width: 100%;
+  height: 5px;
+}
+
+.card-footer .author-date {
+  background-color: var(--base-color);
+  width: 100%;
+  height: 5px;
+}
+
+.bg-animate {
+  background-image: linear-gradient(
+    to right,
+    #f6f7f8 0%,
+    #e3e3e7 10%,
+    #f6f7f8 20%,
+    #f6f7f8 100%
+  );
+  background-size: 200% 100%;
+  animation: bgAnimate 1.5s linear infinite;
+}
+
+@keyframes bgAnimate {
+  0% {
+    background-position: 50% 0;
+  }
+
+  100% {
+    background-position: -150% 0;
+  }
+}
