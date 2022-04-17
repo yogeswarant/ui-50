@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --dark-color: #424242;
+  --light-color: #8f8d8d;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--dark-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#form {
+  width: 80%;
+}
+
+#user {
+  background-color: var(--light-color);
+  border: none;
+  padding: 0.5rem;
+  color: #fff;
+  border-radius: 10px;
+  width: 100%;
+}
+
+#user::placeholder {
+  color: #ddd;
+}
+
+#user:focus {
+  outline: none;
+}
+
+#main {
+  background-color: var(--light-color);
+  margin-top: 2rem;
+  width: 80%;
+  border-radius: 10px;
+}
+
+.profile {
+  display: flex;
+}
+
+
+.profile .photo img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 5px var(--dark-color) solid;
+  margin: 2rem 1rem;
+}
+
+.profile .text {
+  margin: 1rem;
+  color: #eee;
+}
+
+.profile .text p {
+  font-size: 12px;
+  margin: 1rem 0;
+}
+
+
+.profile .text h1 {
+  font-size: 18px;
+  margin: 1rem 0;
+}
+
+.profile .text .social {
+  display: flex;
+  font-size: 14px;
+  margin: 1rem 0;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.profile .text .social p {
+  padding: 0.1rem 0.3rem;
+  font-size: 10px;
+}
+
+.profile .text .repos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.profile .text .repos .repo {
+  background-color: var(--dark-color);
+  padding: 0.4rem;
+  margin: 0.2rem;
+  font-size: 10px;
+}
+
+.profile .text .repos .repo a {
+  cursor: pointer;
+}
+
+.profile .text .repos .repo a {
+  text-decoration: none;
+  color: #ddd;
+}
