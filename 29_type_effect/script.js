@@ -27,7 +27,7 @@ function start() {
       cursorEl.style.opacity = 1
       show = true
     }
-  }, interval/2)
+  }, 500)
 
   typeInterval = setInterval(() => {
     text += typingValue[index]

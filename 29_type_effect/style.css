@@ -18,8 +18,9 @@ body {
 
 .cursor {
   color: #ccc;
+  font-family: 'Times New Roman', Times, serif;
   font-size: 3rem;
-  font-weight: 200;
+  font-weight: 100;
 }
 
 .speed-select {
