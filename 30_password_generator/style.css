@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgb(51,55,137);
+}
+
+main {
+  background-color: rgb(33, 33, 79);
+  color: white;
+}
+
+#password-generator {
+  margin: 0.5rem;
+  display: flex;
+  width: 200px;
+  flex-direction: column;
+  align-items: center;  
+}
+
+#password-generator h3 {
+  font-size: 0.8rem;
+}
+
+#password-generator  div {
+  font-size: 0.6rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3rem 0.5rem;
+}
+
+.pwd-length input {
+  width: 2rem;
+}
+
+input[type=text]:focus {
+  outline: none;
+}
+
+#gpwd {
+  background-color: rgb(15, 17, 41);
+  color: white;
+  border: none;
+  font-size: 12px;
+  padding: 0.5rem;
+  width: 15rem;
+}
+
+#pwdLength {
+  font-size: 10px;
+  outline: none;
+}
+
+.copy {
+  background-color: rgb(51,55,137);
+  color: white;
+  border: none;
+  width: 2.5rem;
+  cursor: pointer;
+}
+
+.copy:active {
+  transform: scale(0.98);
+}
+
+.copy:hover {
+  background-color: rgb(56, 60, 152); 
+}
+
+.submit {
+  padding: 0.2rem;
+  background-color: rgb(51,55,137);
+  color: white;
+  border: none;
+  font-size: 0.5rem;
+  width: 95%;
+  cursor: pointer;
+}
+
+.submit:active {
+  transform: scale(0.98);
+}
+
+.submit:hover {
+  background-color: rgb(59, 65, 165);
+}
+
+.pwd-generator {
+  margin-bottom: 0.5rem;
+}
